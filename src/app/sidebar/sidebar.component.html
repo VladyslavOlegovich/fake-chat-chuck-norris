@@ -1,0 +1,44 @@
+<div id="sidebar-container">
+  <div id="sidebar-header">
+    <div id="avatar-container">
+      <img src="../../assets/user-avatar.png" alt="user-avatar" />
+    </div>
+    <div id="search-area">
+      <div class="input-area">
+        <img src="../assets/search-icon.png" alt="search-icon" />
+
+        <input
+          [(ngModel)]="searchText"
+          type="text"
+          placeholder="Search or start new chat"
+        />
+      </div>
+    </div>
+  </div>
+  <p class="chat-header">Chats</p>
+  <div id="sidebar-content">
+    <div
+      id="sidebar-conversation"
+      *ngFor="
+        let conversation of !searchText ? conversations : searchConversation
+      "
+      (click)="conversationClicked.emit(conversation)"
+    >
+      <div class="picture">
+        <img src="{{ conversation.src }}" alt="user-avatar" />
+        <img
+          class="green-tick"
+          src="../../assets/green-tick.png"
+          alt="green-tick"
+        />
+      </div>
+      <div class="content">
+        <div class="conversation-header">
+          <div class="name">{{ conversation.name }}</div>
+          <div class="date">{{ conversation.date }}</div>
+        </div>
+        <div class="conversation-message">{{ conversation.message }}</div>
+      </div>
+    </div>
+  </div>
+</div>

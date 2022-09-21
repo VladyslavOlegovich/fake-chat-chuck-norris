@@ -1,0 +1,29 @@
+
+body {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+
+::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: rgb(220, 220, 220);
+    border-radius: 50px;
+
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: rgb(190, 190, 190);
+    opacity: 1;
+    border-radius: 25px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgb(170, 170, 170);
+    opacity: 0.1;
+  }
+
+}

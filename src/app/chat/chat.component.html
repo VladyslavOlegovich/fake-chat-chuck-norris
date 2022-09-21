@@ -1,0 +1,45 @@
+<div id="container">
+  <div id="chat-header">
+    <div class="content">
+      <div id="header-avatar">
+        <div class="avatar">
+          <img src="{{ conversation.src }}" alt="s" />
+        </div>
+        <div class="name">{{ conversation.name }}</div>
+      </div>
+    </div>
+  </div>
+  <div id="chat-body">
+    <div
+      class="message"
+      [ngClass]="{ me: message.me }"
+      *ngFor="let message of conversation.messages"
+    >
+      <div class="message-avatar">
+        <img src="{{ conversation.src }}" alt="" />
+      </div>
+      <div class="messageContent">
+        {{ message.body }}
+      </div>
+      <div class="date">{{ message.date | date: "short" }}</div>
+    </div>
+  </div>
+  <div id="chat-footer">
+    <div id="text-area">
+      <textarea
+        #textMessage
+        name=""
+        id=""
+        cols="60"
+        rows="5"
+        placeholder="Type your message"
+        (keyup.enter)="sendMessage($event)"
+      ></textarea>
+    </div>
+    <div id="send-message">
+      <button (click)="sendMessageByClick(textMessage)">
+        <img src="../../assets/send-icon.png" alt="send-icon" />
+      </button>
+    </div>
+  </div>
+</div>

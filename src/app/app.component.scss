@@ -1,0 +1,45 @@
+#background {
+    height: 100vh;
+    background-color: rgb(247, 247, 247);
+}
+
+#app-chat-container {
+    display: flex;
+    flex-direction: row;
+    position: fixed;
+    top: 0%;
+    bottom: 0%;
+    margin: auto;
+    width: 80%;
+    height: 90%;
+    right: 0px;
+    left:0px;
+    background-color: rgb(239, 239, 239);
+    border-radius: 10px;
+
+    app-sidebar {
+        flex-basis: 30%;
+        display: block;
+        height: 100%;
+    }
+
+    #chat-container {
+        background-color: rgb(240, 240, 240);
+        flex-grow: 1;
+        #empty-chat {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            justify-content: center;
+            margin: 0 auto;
+            
+            p {
+            margin: 300px auto;
+                padding: 10px;
+                border-radius: 20px;
+                color: rgb(60, 60, 60);
+            }
+        }
+    }
+
+}
