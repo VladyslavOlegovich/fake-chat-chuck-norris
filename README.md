@@ -3,6 +3,9 @@
 here you can find my application:
 https://stackblitz.com/github/VladyslavOlegovich/fake-chat-chuck-norris?file=README.md
 
+
+in this application you can send a message and get a joke from chuck norris in 10-15 seconds as a response.
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.2.2.
 
 ## Development server
